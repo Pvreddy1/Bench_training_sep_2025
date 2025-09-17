@@ -6,7 +6,8 @@ name: First Workflow
 on:
   schedule:
 
-   - cron: '30 17 * * *'
+   - cron: '30 17 * * *'    # runs every day at 5:30 pm
+   workflow_dispatch:       # manual trigger
   
  
 jobs:
