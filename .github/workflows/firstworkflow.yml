@@ -6,10 +6,7 @@ name: First Workflow
 on:
   schedule:
 
-   - cron: '* * * * *'
-
-    types:
-     - open
+   - cron: '30 17 * * *'
   
  
 jobs:
