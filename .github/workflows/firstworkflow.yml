@@ -1,0 +1,30 @@
+name:first workflow
+
+# triggers - events - push, pull_request, issue, workflow_dispatch , fork, pull_request_review, workflow_call , schedular
+on:
+ push
+
+
+jobs:
+ build:
+  runs-on: ubuntu-latest 
+  steps:
+   - name: print
+     run:echo 'build'
+
+ test:
+  needs: build
+   runs-on: windows-latest
+   steps:
+     - name: print
+       run:echo 'test'
+
+ deploy:
+  needs: [build. test]
+  runs-on: ubuntu-latest
+  steps:
+     - name: print
+       run:echo 'deploy'
+
+
+
