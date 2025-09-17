@@ -1,7 +1,10 @@
 name: First Workflow
+
+# triggers -vents - Push , Pull_request , Issue , workflow_dispatch , fork , Pull_request_review, schedule
+
  
 on:
-  push:
+  pull_request
   
  
 jobs:
